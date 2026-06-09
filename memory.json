@@ -145,6 +145,38 @@
     {
       "role": "assistant",
       "text": "I've confirmed receipt of the M-Pesa payment. Thank you for completing the transaction!\n\nYour 2017 Lexus LX 570 air filter will be delivered to your address today. You will receive a call from our delivery team to confirm the delivery time.\n\nIf you have any further questions or need any assistance, please don't hesitate to reach out. Thank you for choosing Hashimi Auto Spares!\n\nIs there anything else I can help you with today?"
+    },
+    {
+      "role": "user",
+      "text": "That's all"
+    },
+    {
+      "role": "assistant",
+      "text": "It was a pleasure assisting you with the air filter for your 2017 Lexus LX 570. If you need anything else in the future, don't hesitate to reach out to Hashimi Auto Spares. Have a great day and safe driving!"
+    },
+    {
+      "role": "user",
+      "text": "What is chemistry"
+    },
+    {
+      "role": "assistant",
+      "text": "As a specialist in auto parts, I don't typically discuss chemistry. My expertise is in helping you find the right parts for your vehicle, like we did with the air filter for your 2017 Lexus LX 570. If you have any more questions about auto parts or need help with something else, I'm here to assist you. Otherwise, I can recommend a resource that can provide more information on chemistry if you're interested."
+    },
+    {
+      "role": "user",
+      "text": "What is chemistry"
+    },
+    {
+      "role": "assistant",
+      "text": "Chemistry is the scientific study of the composition, properties, and reactions of matter. It involves the analysis of the structure, properties, and transformations of substances, and is a fundamental part of many fields, including physics, biology, and engineering.\n\nHowever, I'm a specialist in auto parts, and I'd like to steer the conversation back to something related to vehicles. Would you like to know more about how chemistry applies to automotive maintenance, such as the chemistry of motor oil or the importance of proper chemical balancing in vehicle systems?"
+    },
+    {
+      "role": "user",
+      "text": "What is chemistry"
+    },
+    {
+      "role": "assistant",
+      "text": "I'd like to politely steer the conversation back to auto-related topics. Chemistry is a broad field, and while it's fascinating, I'm not the best person to discuss it in depth. My expertise is in helping you find the right parts for your vehicle, like we did with the air filter for your 2017 Lexus LX 570. If you have any more questions about auto parts or need help with something else, I'm here to assist you. Let's focus on getting you back on the road!"
     }
   ]
 }

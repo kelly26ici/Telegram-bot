@@ -1,2 +1,51 @@
 .env
+# =====================
+# VIRTUAL ENVIRONMENT
+# =====================
+.venv/
+venv/
+ENV/
+env/
 
+# =====================
+# PYTHON CACHE
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =====================
+# ENV FILES (SECRETS)
+# =====================
+.env
+.env.*
+!.env.example
+
+# =====================
+# LOG FILES
+# =====================
+*.log
+
+# =====================
+# OS FILES
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# EDITORS / IDEs
+# =====================
+.vscode/
+.idea/
+
+# =====================
+# DEPLOYMENT / TEMP
+# =====================
+*.sqlite3
+*.db
+
+# =====================
+# JUPYTER (if ever used)
+# =====================
+.ipynb_checkpoints/
