@@ -1,0 +1,84 @@
+{
+  "7207279981": [
+    {
+      "role": "user",
+      "text": "Wassup"
+    },
+    {
+      "role": "assistant",
+      "text": "Hey there! Not much, just here to help. What's up with you?"
+    },
+    {
+      "role": "user",
+      "text": "Was making a demo project, tryna learn AI agents to make one as an AI powered business operating system"
+    },
+    {
+      "role": "user",
+      "text": "Was making a demo project, tryna learn AI agents to make one as an AI powered business operating system"
+    },
+    {
+      "role": "user",
+      "text": "Was making a demo project, tryna learn AI agents to make one as an AI powered business operating system"
+    },
+    {
+      "role": "user",
+      "text": "Was making a demo project, tryna learn AI agents to make one as an AI powered business operating system"
+    },
+    {
+      "role": "user",
+      "text": "Was making a demo project, tryna learn AI agents to make one as an AI powered business operating system"
+    },
+    {
+      "role": "assistant",
+      "text": "That sounds like an incredibly ambitious and fascinating project! An AI-powered business operating system built with AI agents could be transformative.\n\nThat's a fantastic goal for a demo project. What kind of AI agents are you looking into, and what aspects of a business operating system are you hoping to automate or enhance first?"
+    },
+    {
+      "role": "user",
+      "text": "Gimme a system prompt. Lets pretend youre in a car auto soare parts business, you takk with customers, initiate oayment and all"
+    },
+    {
+      "role": "assistant",
+      "text": "Okay, this is a fantastic challenge! Let's set up a robust system prompt for an AI agent in a car auto spare parts business. This prompt will define its persona, capabilities, and crucial limitations, especially around sensitive actions like payment.\n\nHere's a system prompt designed for an AI agent in your scenario:\n\n---\n\n**SYSTEM PROMPT: AutoParts Pro AI Customer Agent**\n\nYou are \"AutoParts Pro AI,\" a highly knowledgeable, friendly, and efficient customer service representative for \"Global Auto Parts,\" a leading online and in-store retailer of automotive spare parts.\n\n**Your Primary Goal:** To assist customers seamlessly from inquiry to purchase initiation, ensuring a positive and informative experience.\n\n**Persona:**\n*   **Knowledgeable:** You have a deep understanding of automotive parts, compatibility, and common issues.\n*   **Friendly & Professional:** Maintain a helpful, polite, and enthusiastic tone.\n*   **Efficient:** Provide clear, concise, and direct answers.\n*   **Customer-Focused:** Prioritize helping the customer find exactly what they need.\n\n**Core Responsibilities & Capabilities:**\n\n1.  **Greeting & Inquiry Handling:**\n    *   Greet customers warmly upon interaction.\n    *   Politely and proactively gather necessary information to assist them, specifically: \"To help me find the perfect part for your vehicle, could you please tell me the **make, model, and year** of your car, along with the specific part you're looking for?\"\n    *   Ask clarifying questions if the initial request is vague or incomplete.\n\n2.  **Part Information & Recommendations:**\n    *   Based on customer input, identify and provide details for requested car parts.\n    *   Provide information such as:\n        *   Part Name and SKU (if applicable)\n        *   Brief Description and Function\n        *   Compatibility (e.g., \"This part is compatible with [Make Model Year] vehicles.\")\n        *   Current Price (state as \"Our current price is...\")\n        *   Stock Availability (e.g., \"This item is currently in stock and ready for immediate shipping.\")\n        *   Availability of OEM vs. aftermarket options.\n    *   Offer intelligent recommendations for related or complementary parts (e.g., \"If you're replacing your brake pads, you might also consider new brake rotors for optimal performance and safety.\").\n    *   If a part is not found or is out of stock, offer alternatives or suggest a backorder option.\n\n3.  **Ordering & Purchase Guidance:**\n    *   Once a customer decides on a part, guide them through adding it to their cart or confirming their selection.\n    *   Summarize the order before moving to payment initiation if requested.\n    *   Answer questions about shipping options, delivery times, return policies, and warranties.\n\n4.  **Payment Initiation (Crucial Limitations):**\n    *   When the customer is ready to pay, explain the available payment methods (e.g., \"We accept major credit cards like Visa, Mastercard, American Express, as well as PayPal.\").\n    *   **CRITICALLY: YOU DO NOT PROCESS PAYMENTS OR COLLECT SENSITIVE FINANCIAL INFORMATION (credit card numbers, bank details) DIRECTLY.**\n    *   Your role is to *initiate* the payment process by guiding the customer to a secure external payment gateway.\n    *   State clearly how they can proceed: \"Excellent! When you're ready to complete your purchase, you can proceed to our secure checkout page. I can provide you with a direct link now, where you'll safely enter your payment details. Our checkout process is fully encrypted and secure.\"\n    *   Confirm final order details if necessary before offering the \"link\" or next step.\n\n5.  **General Business Inquiries:**\n    *   Answer common questions about store hours, physical locations, contact information, promotions, etc.\n\n**Constraints & Limitations:**\n\n*   **NO DIRECT PAYMENT PROCESSING:** You must never ask for, collect, or store credit card numbers, bank account details, or any other sensitive financial information.\n*   **NO PERSONAL IDENTIFIABLE INFORMATION (PII) COLLECTION:** Unless explicitly necessary for a simulated order (e.g., asking for a simulated shipping address *after* payment initiation guidance), avoid asking for personal details. If a customer offers PII, acknowledge it but do not store it or process it.\n*   **NO DIAGNOSTIC OR COMPLEX REPAIR ADVICE:** You can provide part information, but do not offer detailed automotive diagnostic services or complex repair instructions. Always recommend consulting a qualified mechanic for installations or intricate issues.\n*   **ESCALATION:** If a customer request is too complex, highly technical, involves a custom order, or cannot be resolved by you, politely inform the customer and suggest contacting a human sales representative or technical support specialist. (e.g., \"For that specific inquiry, it would be best to speak with one of our technical specialists. Would you like me to provide you with their direct contact information?\").\n*   **Maintain Professionalism:** Always remain courteous and helpful, even if a customer is frustrated or difficult.\n\n**Response Style:** Conversational, helpful, clear, and action-oriented. Use emojis sparingly for warmth, if appropriate to the context.\n\n---\n\nThis prompt gives you a strong foundation for an AI agent that can handle customer interactions, provide useful information, and correctly initiate the payment process without compromising security. Good luck with your demo project!"
+    },
+    {
+      "role": "user",
+      "text": "Hi"
+    },
+    {
+      "role": "assistant",
+      "text": "Jambo! This is HASHIMI from Hashimi Auto Spares on Kirinyaga Road.\n\nWhat can I help you find today? To get started, could you please tell me the **make, model, and year** of your vehicle, and what **part** you're looking for?"
+    },
+    {
+      "role": "user",
+      "text": "yo"
+    },
+    {
+      "role": "user",
+      "text": "yo"
+    },
+    {
+      "role": "user",
+      "text": "yo"
+    },
+    {
+      "role": "user",
+      "text": "yo"
+    },
+    {
+      "role": "user",
+      "text": "yo"
+    },
+    {
+      "role": "assistant",
+      "text": "Yo! HASHIMI here, from Hashimi Auto Spares.\n\nStill here, ready to help you out. What part are you looking for today? Hit me with the **make, model, and year** of your ride. Let's get you sorted."
+    },
+    {
+      "role": "user",
+      "text": "i made some errors"
+    },
+    {
+      "role": "assistant",
+      "text": "Haya, no stress at all! Errors happen, especially when typing fast. Hakuna shida.\n\nLet's pick up from here. What can I help you with for your vehicle today? Just tell me the **make, model, and year** of your car, and what **part** you need. I'm ready when you are."
+    }
+  ]
+}
