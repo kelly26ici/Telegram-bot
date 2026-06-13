@@ -120,7 +120,7 @@ async def telegram_webhook(request: Request):
         return {"ok": True}
 
     if user_text == "/start":
-        await send_message(chat_id, "Hey! I'm your Hashimi auto spare parts sales agent. How may I help you.")
+        await send_message(chat_id, "Jarvis:More alcohol!")
         return {"ok": True}
 
     if user_text == "/reset":
