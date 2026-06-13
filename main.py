@@ -2,10 +2,9 @@ import os
 import json
 import httpx
 from fastapi import FastAPI, Request
-from google import genai
 from openai import OpenAI
 from dotenv import load_dotenv
-from prompt import system_prompt
+from supabase import create_client
 
 load_dotenv()
 
@@ -14,17 +13,27 @@ app = FastAPI()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # your ngrok URL
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
-#client = genai.Client(api_key=GEMINI_API_KEY)
 client = OpenAI(
     api_key=GROQ_API_KEY,
     base_url="https://api.groq.com/openai/v1"
 )
+
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 DB_FILE = "memory.json"
+system_prompt_cache = None
 
 
-
+def get_system_prompt():
+    global system_prompt_cache
+    if system_prompt_cache is None:
+        result = supabase.table("config").select("value").eq("key", "system_prompt").single().execute()
+        system_prompt_cache = result.data["value"]
+    return system_prompt_cache
 
 
 def load_memory():
@@ -59,7 +68,6 @@ async def send_message(chat_id, text):
         await http.post(url, json={"chat_id": chat_id, "text": text})
 
 
-
 @app.on_event("startup")
 async def set_webhook():
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/setWebhook"
@@ -67,12 +75,13 @@ async def set_webhook():
         r = await http.post(url, json={"url": f"{WEBHOOK_URL}/webhook"})
         print("Webhook set:", r.json())
 
+
 def ask_llm(chat_id, user_text):
     history = get_context(chat_id)
     messages = [
         {
-          "role": "system",
-          "content": system_prompt
+            "role": "system",
+            "content": get_system_prompt()
         }
     ]
 
@@ -94,6 +103,7 @@ def ask_llm(chat_id, user_text):
     )
 
     return response.choices[0].message.content
+
 
 @app.post("/webhook")
 async def telegram_webhook(request: Request):
