@@ -1,4 +1,4 @@
-.env
+
 # =====================
 # VIRTUAL ENVIRONMENT
 # =====================
@@ -16,7 +16,7 @@ __pycache__/
 *.pyd
 
 # =====================
-# ENV FILES (SECRETS)
+# ENV FILES 
 # =====================
 .env
 .env.*
@@ -36,7 +36,6 @@ Thumbs.db
 # =====================
 # EDITORS / IDEs
 # =====================
-.vscode/
 .idea/
 
 # =====================
@@ -44,8 +43,3 @@ Thumbs.db
 # =====================
 *.sqlite3
 *.db
-
-# =====================
-# JUPYTER (if ever used)
-# =====================
-.ipynb_checkpoints/
