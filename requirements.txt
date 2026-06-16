@@ -20,4 +20,3 @@ idna==3.17
 certifi==2026.5.20
 urllib3==2.7.0
 charset-normalizer==3.4.7
-supabase==2.30.1
