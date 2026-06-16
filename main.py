@@ -31,7 +31,7 @@ system_prompt_cache = None
 async def telegram_webhook(request: Request):
     print("Webhook hit!")
     data = await request.json()
-    print("Data:", data
+    print("Data:", data)
 
 def get_system_prompt():
     global system_prompt_cache
