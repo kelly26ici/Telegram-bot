@@ -29,9 +29,38 @@ system_prompt_cache = None
 
 @app.post("/webhook")
 async def telegram_webhook(request: Request):
-    print("Webhook hit!")
+    print("=== WEBHOOK HIT ===")
     data = await request.json()
-    print("Data:", data)
+    message = data.get("message")
+    if not message:
+        return {"ok": True}
+
+    chat_id = message["chat"]["id"]
+    user_text = message.get("text", "")
+    print(f"chat_id: {chat_id}, text: {user_text}")
+
+    if not user_text:
+        await send_message(chat_id, "I can only handle text messages for now.")
+        return {"ok": True}
+
+    if user_text == "/start":
+        await send_message(chat_id, "Jarvis: More alcohol!")
+        return {"ok": True}
+
+    if user_text == "/reset":
+        memory = load_memory()
+        memory[str(chat_id)] = []
+        save_memory(memory)
+        await send_message(chat_id, "Memory cleared!")
+        return {"ok": True}
+
+    print("=== CALLING LLM ===")
+    add_message(chat_id, "user", user_text)
+    reply = ask_llm(chat_id, user_text)
+    print(f"=== LLM REPLY: {reply} ===")
+    add_message(chat_id, "assistant", reply)
+    await send_message(chat_id, reply)
+    return {"ok": True}
 
 def get_system_prompt():
     global system_prompt_cache
