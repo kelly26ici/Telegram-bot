@@ -27,6 +27,11 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 DB_FILE = "memory.json"
 system_prompt_cache = None
 
+@app.post("/webhook")
+async def telegram_webhook(request: Request):
+    print("Webhook hit!")
+    data = await request.json()
+    print("Data:", data
 
 def get_system_prompt():
     global system_prompt_cache
